@@ -1,3 +1,18 @@
+# coding: utf-8
+__author__ = "Alison Mukoma"
+__copyright__  = "DevsBranch"
+__date__ = "14/11/2020"
+"""
+welcome to the python expert series compilation
+The joys of live coding.
+
+The code in here was initialized from a live coding session. 
+But we feel ambitious to grow it into a fancy bookmarking application 
+or better as we sharpen our python skillset that we can then find useful 
+for keeping track of online URL content. 
+Welcome aboard ship Nebuchadnezzar in the city of zion (^__^)
+"""
+
 from models import User
 from models import my_session
 

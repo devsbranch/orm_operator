@@ -1,21 +1,17 @@
-# EXPERT PYTHON SERIES
-# classes - intensive
-# interacting python - SQL
-# python for everything - classes
-# packages/modules - thousands of built in python modules,
-# 3rd party modules/libraries - install using, pip3 install package-name
-# alias pip=pip3
+# coding: utf-8
+__author__ = "Alison Mukoma"
+__copyright__  = "DevsBranch"
+__date__ = "14/11/2020"
+"""
+welcome to the python expert series compilation
+The joys of live coding.
 
-# sqlite3 = MSSQL,  mysql, psql, mdb, oracle
-# ORM - object relational model
-
-# 3rd party library - `pip3 install sqlalchemy`
-
-# db -> users.py
-# mechanics -> controllers/app/freestyle.py
-# UI -> templates -> flask
-
-# users.py - db - OOP classes + methods + functions
+The code in here was initialized from a live coding session. 
+But we feel ambitious to grow it into a fancy bookmarking application 
+or better as we sharpen our python skillset that we can then find useful 
+for keeping track of online URL content. 
+Welcome aboard ship Nebuchadnezzar in the city of zion (^__^)
+"""
 
 
 from sqlalchemy import (
