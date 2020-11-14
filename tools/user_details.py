@@ -13,8 +13,8 @@ whilst on a path to sharpen our python expertize.
 Once more welcome aboard ship Nebuchadnezzar in the city of zion (^__^).
 """
 
-from models import User
-from models import my_session
+from models.users import User
+from models.users import my_session
 
 
 # create some entries
