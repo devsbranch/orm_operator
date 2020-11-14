@@ -28,4 +28,3 @@ from models import my_session
 all_users = my_session.query(User).all()
 for user in all_users:
     print(f'ID: {user.id} Username: {user.username}, With password: {user.password}')
-
