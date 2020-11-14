@@ -26,7 +26,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 
-db_path = '../../orm_shared/models/orm_py.db'
+db_path = '../models/orm_py.db'
 db_engine = create_engine('sqlite:///{}'.format(db_path))
 
 Base = declarative_base()

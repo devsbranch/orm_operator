@@ -1,6 +1,5 @@
-from orm_shared.models import User
-from orm_shared.models import my_session
-
+from models import User
+from models import my_session
 
 
 # create some entries
