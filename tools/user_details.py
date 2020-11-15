@@ -14,7 +14,7 @@ Once more welcome aboard ship Nebuchadnezzar in the city of zion (^__^).
 """
 
 from models.users import User
-from models.users import my_session
+from models.config import my_session
 
 
 # create some entries
