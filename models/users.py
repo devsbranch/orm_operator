@@ -13,20 +13,10 @@ whilst on a path to sharpen our python expertize.
 Once more welcome aboard ship Nebuchadnezzar in the city of zion (^__^).
 """
 
-from sqlalchemy import (
-    create_engine, Column, Date,
+from sqlalchemy import (Column, Date,
     Integer, String, Date, ForeignKey, Text)
 
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
-
-db_path = '../models/orm_py.db'
-db_engine = create_engine('sqlite:///{}'.format(db_path))
-
-Base = declarative_base()
-
-Session = sessionmaker(bind=db_engine)
-my_session = Session()
+from .config import Base, db_engine
 
 
 class User(Base):
