@@ -1,6 +1,6 @@
 # coding: utf-8
 __author__ = "Alison Mukoma"
-__copyright__  = "DevsBranch"
+__copyright__ = "DevsBranch"
 __date__ = "14/11/2020"
 """
 Welcome to the python expert series compilation
@@ -19,6 +19,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 db_path = '../models/orm_py.db'
+# db_path = '../models/orm_local.db'
 db_engine = create_engine('sqlite:///{}'.format(db_path))
 
 Base = declarative_base()
