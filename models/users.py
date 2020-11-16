@@ -48,4 +48,5 @@ class UserDetails(Base):
         self.date = date
 
 
+
 Base.metadata.create_all(db_engine)
