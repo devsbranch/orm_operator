@@ -1,8 +1,7 @@
 # coding: utf-8
-from __future__ import absolute_import
 
 __author__ = "Alison Mukoma"
-__copyright__  = "DevsBranch"
+__copyright__ = "DevsBranch"
 __date__ = "14/11/2020"
 """
 Welcome to the python expert series compilation
@@ -16,7 +15,6 @@ Once more welcome aboard ship Nebuchadnezzar in the city of zion (^__^).
 """
 from models.users import User
 from models.config import my_session
-
 
 # create some entries
 #
