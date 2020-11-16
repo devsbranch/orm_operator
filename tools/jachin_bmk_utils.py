@@ -1,11 +1,13 @@
 from models.jachin_bmk import BmkTable
 from models.config import my_session
+from datetime import date
 
+today = date.today()
 
-google = BmkTable('Google', 'www.google.com', 'Search engine')
-youtube = BmkTable('Youtube', 'www.youtube.com', 'Online video sharing site')
-wikipedia = BmkTable('Wikipedia', 'www.wikipedia.com', 'Online open source encyclopedia')
-bing = BmkTable('Bing', 'www.bing.com', 'Microsoft search engine')
+google = BmkTable('Google', 'www.google.com', 'Search engine', today)
+youtube = BmkTable('Youtube', 'www.youtube.com', 'Online video sharing site', today)
+wikipedia = BmkTable('Wikipedia', 'www.wikipedia.com', 'Online open source encyclopedia', today)
+bing = BmkTable('Bing', 'www.bing.com', 'Microsoft search engine', today)
 
 bookmark_names = [google, youtube, wikipedia, bing]
 

@@ -1,3 +1,7 @@
+__author__ = "Jachin Manda"
+__copyright__ = "DevsBranch"
+__date__ = "16/11/2020"
+
 from sqlalchemy import (Integer, Column, String, Date)
 
 from models.config import Base, db_engine
@@ -12,10 +16,11 @@ class BmkTable(Base):
     bmk_desc = Column('bookmark_description', String(50))
     date = Column(Date)
 
-    def __init__(self, bmk_name, bmk_url, bmk_desc):
+    def __init__(self, bmk_name, bmk_url, bmk_desc, date):
         self.bmk_name = bmk_name
         self.bmk_url = bmk_url
         self.bmk_desc = bmk_desc
+        self.date = date
 
     def __repr__(self):
         return f"<Object name: {self.bmk_name}"
