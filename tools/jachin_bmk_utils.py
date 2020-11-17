@@ -13,9 +13,13 @@ bookmark_names = [google, youtube, wikipedia, bing]
 
 
 def add_bookmark():
+    """ This function will add the bookmarks to the database by iterating
+    over each bookmark in the list which are instances of the BmkTable containing the 'bookmark name',
+    'bookmark url', 'bookmark description' and 'Date'. The data with be added to the database using the
+    my_session.add() method then the my_session.commit() will save the changes to the database. """
     for bookmark in bookmark_names:
         my_session.add(bookmark)
-    my_session.commit()
+        my_session.commit()
     my_session.close()
 
 
