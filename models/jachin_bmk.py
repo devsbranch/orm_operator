@@ -8,11 +8,13 @@ from models.config import Base, db_engine
 
 
 class BmkTable(Base):
-    """ This class creates the table 'bmk_table' in the database using the __tablename__ method.
-        The attributes inside the Column specifies the name of the column the table will have, the
-        type of values it will have and whether the value will be a primary or foreign key. Then the
-        Column with its attributes are assigned to a variable which will be a class attribute
-        in the __init__ method. """
+    """
+    This class creates the table 'bmk_table' in the database using the __tablename__ method.
+    The attributes inside the Column specifies the name of the column the table will have, the
+    type of values it will have and whether the value will be a primary or foreign key. Then the
+    Column with its attributes are assigned to a variable which will be a class attribute
+    in the __init__ method.
+    """
 
     __tablename__ = 'bmk_table'
     __table_args__ = {'extend_existing': True}
