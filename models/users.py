@@ -1,6 +1,6 @@
 # coding: utf-8
 __author__ = "Alison Mukoma"
-__copyright__  = "DevsBranch"
+__copyright__ = "DevsBranch"
 __date__ = "14/11/2020"
 """
 Welcome to the python expert series compilation
@@ -13,8 +13,7 @@ whilst on a path to sharpen our python expertize.
 Once more welcome aboard ship Nebuchadnezzar in the city of zion (^__^).
 """
 
-from sqlalchemy import (Column, Date,
-    Integer, String, Date, ForeignKey, Text)
+from sqlalchemy import (Column, Integer, String, Date, ForeignKey, Text)
 
 from .config import Base, db_engine
 
@@ -33,6 +32,7 @@ class User(Base):
     def __repr__(self):
         return f'<Object name: {self.username}>'
 
+
 class UserDetails(Base):
     __tablename__ = 'user_details'
 
@@ -46,5 +46,6 @@ class UserDetails(Base):
         self.cell = cell
         self.address = address
         self.date = date
+
 
 Base.metadata.create_all(db_engine)
