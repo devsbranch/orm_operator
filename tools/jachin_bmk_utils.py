@@ -4,26 +4,44 @@ from datetime import date
 
 today = date.today()
 
-google = BmkTable('Google', 'www.google.com', 'Search engine', today)
-youtube = BmkTable('Youtube', 'www.youtube.com', 'Online video sharing site', today)
-wikipedia = BmkTable('Wikipedia', 'www.wikipedia.com', 'Online open source encyclopedia', today)
-bing = BmkTable('Bing', 'www.bing.com', 'Microsoft search engine', today)
 
-bookmark_names = [google, youtube, wikipedia, bing]
-
-
-def add_bookmark():
+def user_menu():
+    """This presents the user with options available for selection.
+    :argument None
+    :parameter None
     """
-    This function will add the bookmarks to the database by iterating
-    over each bookmark in the list which are instances of the BmkTable containing the 'bookmark name',
-    'bookmark url', 'bookmark description' and 'Date'. The data with be added to the database using the
-    my_session.add() method then the my_session.commit() will save the changes to the database.
-    """
-    for bookmark in bookmark_names:
-        my_session.add(bookmark)
-        my_session.commit()
-    my_session.close()
+    user_options = {
+        'C': 'Create new bookmark',
+        'Q': 'Quit program'
+    }
+    return user_options
 
 
-add_bookmark()
+def user_options():
+    print('\nPlease select an option amongst the letters on the left')
+    for action, descr in user_menu().items():
+        print(f'{action} : {descr}')
+    while True:
+        user_choice = input('Select an option listed below:  ')
+        if user_choice == list(user_menu().keys())[0]:
+            bmk_name = input('Enter a name for your bookmark:  ')
+            bmk_url = input('Enter bookmark url:  ')
+            bmk_desc = input('Enter bookmark description:  ')
+            bmk_info = [bmk_name, bmk_url, bmk_desc]
+            bookmark = BmkTable(bmk_info[0], bmk_info[1], bmk_info[2], today)
+            my_session.add(bookmark)
+            my_session.commit()
+            my_session.close()
+            print('Bookmark Added')
+            break
+        elif user_choice == list(user_menu().keys())[1]:
+            print('Program stopped.')
+            break
+        else:
+            print('Invalid option selected.')
+            continue
+
+
+user_options()
+
 print("Operation Completed")
