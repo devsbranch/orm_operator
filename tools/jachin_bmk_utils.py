@@ -1,6 +1,7 @@
 from models.jachin_bmk import BmkTable
 from models.config import my_session
 from datetime import date
+from tools import data_utils
 
 today = date.today()
 
@@ -33,6 +34,7 @@ def user_options():
             my_session.commit()
             my_session.close()
             print('Bookmark Added')
+            data_utils.csv_file_read_write(bmk_name, bmk_url, bmk_desc, today)
             break
         elif user_choice == list(user_menu().keys())[1]:
             print('Program stopped.')
